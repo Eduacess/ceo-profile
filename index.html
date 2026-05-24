@@ -2,6 +2,7 @@
 <html lang="en">
 
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -20,31 +21,28 @@ scroll-behavior:smooth;
 
 body{
 font-family:'Poppins',sans-serif;
-background:#f6f1ea;
-color:#2d2218;
+background:#f7f2eb;
+color:#2e241b;
 overflow-x:hidden;
 }
 
-/* HERO */
+/* HERO SECTION */
 
 .hero{
 min-height:100vh;
 display:flex;
 align-items:center;
 justify-content:center;
-padding:70px 8%;
+padding:80px 8%;
 background:
-linear-gradient(rgba(246,241,234,0.90),rgba(246,241,234,0.95)),
-url('https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=2070');
-background-size:cover;
-background-position:center;
+linear-gradient(135deg,#f8f3ed,#efe3d3,#f5ede3);
 }
 
 .hero-container{
-max-width:1250px;
+max-width:1300px;
 display:grid;
 grid-template-columns:1fr 1fr;
-gap:70px;
+gap:80px;
 align-items:center;
 }
 
@@ -56,15 +54,17 @@ justify-content:center;
 .profile-image{
 width:100%;
 max-width:430px;
-border-radius:30px;
+border-radius:32px;
+filter:drop-shadow(0 20px 40px rgba(140,90,43,0.18));
 }
 
 .hero-text h1{
-font-size:74px;
-line-height:1.1;
-margin-bottom:15px;
+font-size:78px;
+line-height:1.05;
+margin-bottom:18px;
 font-weight:800;
-color:#2d2218;
+letter-spacing:-2px;
+color:#2b2017;
 }
 
 .highlight{
@@ -72,17 +72,18 @@ color:#8c5a2b;
 }
 
 .hero-text h2{
-font-size:25px;
+font-size:24px;
 font-weight:500;
+line-height:1.7;
 margin-bottom:28px;
-color:#5f4630;
+color:#5c4631;
 }
 
 .hero-text p{
 font-size:17px;
-line-height:1.9;
+line-height:2;
 margin-bottom:24px;
-color:#5a4b3d;
+color:#5f4f42;
 }
 
 .button-group{
@@ -93,11 +94,12 @@ margin-top:35px;
 }
 
 .btn{
-padding:15px 32px;
-border-radius:50px;
+padding:16px 34px;
+border-radius:60px;
 text-decoration:none;
 font-weight:600;
 transition:0.4s;
+font-size:15px;
 }
 
 .primary-btn{
@@ -122,21 +124,22 @@ color:white;
 /* SECTIONS */
 
 section{
-padding:100px 8%;
+padding:110px 8%;
 }
 
 .section-title{
-font-size:48px;
+font-size:50px;
 text-align:center;
-margin-bottom:20px;
-color:#2d2218;
+margin-bottom:22px;
+font-weight:700;
+color:#2b2017;
 }
 
 .section-sub{
-max-width:850px;
+max-width:920px;
 margin:auto;
 text-align:center;
-line-height:1.9;
+line-height:2;
 font-size:17px;
 color:#5f4f42;
 margin-bottom:70px;
@@ -144,77 +147,35 @@ margin-bottom:70px;
 
 /* ABOUT */
 
-.about-box{
-background:white;
-padding:50px;
-border-radius:30px;
-box-shadow:0 10px 30px rgba(0,0,0,0.05);
-max-width:1100px;
+.about-container{
+max-width:1180px;
 margin:auto;
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:35px;
 }
 
-.about-box p{
-line-height:2;
-font-size:17px;
-color:#4f4236;
-}
-
-/* TIMELINE */
-
-.timeline{
-max-width:1000px;
-margin:auto;
-position:relative;
-}
-
-.timeline::before{
-content:'';
-position:absolute;
-left:50%;
-top:0;
-width:3px;
-height:100%;
-background:#8c5a2b;
-transform:translateX(-50%);
-}
-
-.timeline-item{
-width:50%;
-padding:30px;
-position:relative;
-}
-
-.timeline-item:nth-child(odd){
-left:0;
-text-align:right;
-}
-
-.timeline-item:nth-child(even){
-left:50%;
-}
-
-.timeline-content{
+.about-card{
 background:white;
-padding:30px;
-border-radius:24px;
-box-shadow:0 10px 30px rgba(0,0,0,0.05);
+padding:45px;
+border-radius:28px;
+box-shadow:0 15px 40px rgba(0,0,0,0.05);
+transition:0.4s;
 }
 
-.timeline-content h3{
+.about-card:hover{
+transform:translateY(-8px);
+}
+
+.about-card h3{
+font-size:28px;
+margin-bottom:18px;
 color:#8c5a2b;
-margin-bottom:10px;
-font-size:24px;
 }
 
-.timeline-content span{
-font-size:14px;
-font-weight:600;
-color:#6f431b;
-}
-
-.timeline-content p{
-margin-top:15px;
-line-height:1.8;
+.about-card p{
+line-height:2;
+font-size:16px;
 color:#5a4b3d;
 }
 
@@ -228,47 +189,48 @@ gap:28px;
 
 .card{
 background:white;
-padding:35px;
-border-radius:24px;
-box-shadow:0 10px 30px rgba(0,0,0,0.05);
+padding:38px;
+border-radius:26px;
+box-shadow:0 15px 40px rgba(0,0,0,0.05);
 transition:0.4s;
 }
 
 .card:hover{
-transform:translateY(-8px);
+transform:translateY(-10px);
 }
 
 .card h3{
-margin-bottom:15px;
-font-size:24px;
+font-size:25px;
+margin-bottom:18px;
 color:#8c5a2b;
 }
 
 .card p{
-line-height:1.8;
-color:#5a4b3d;
+line-height:1.9;
+font-size:15px;
+color:#5f4f42;
 }
 
 /* VISION */
 
 .vision{
-background:#efe5d8;
+background:#efe3d6;
 }
 
 .vision-box{
-max-width:1000px;
+max-width:1100px;
 margin:auto;
+padding:70px;
 background:white;
-padding:60px;
-border-radius:30px;
-box-shadow:0 10px 30px rgba(0,0,0,0.05);
+border-radius:32px;
+box-shadow:0 15px 40px rgba(0,0,0,0.05);
 text-align:center;
 }
 
 .vision-box p{
-font-size:19px;
-line-height:2;
-color:#4f4236;
+font-size:20px;
+line-height:2.2;
+color:#4d4034;
 }
 
 /* CONTACT */
@@ -280,19 +242,19 @@ text-align:center;
 .contact-links{
 display:flex;
 justify-content:center;
-gap:20px;
+gap:22px;
 flex-wrap:wrap;
-margin-top:40px;
+margin-top:45px;
 }
 
 .contact-links a{
 text-decoration:none;
-padding:16px 28px;
+padding:17px 30px;
 background:white;
-border-radius:50px;
-color:#5a4b3d;
+border-radius:60px;
+color:#5f4f42;
 font-weight:500;
-box-shadow:0 10px 25px rgba(0,0,0,0.05);
+box-shadow:0 15px 35px rgba(0,0,0,0.05);
 transition:0.4s;
 }
 
@@ -304,15 +266,16 @@ color:white;
 /* FOOTER */
 
 footer{
-padding:30px;
+padding:35px;
 text-align:center;
-background:#2d2218;
-color:#f6f1ea;
+background:#2b2017;
+color:#f7f2eb;
+font-size:14px;
 }
 
 /* RESPONSIVE */
 
-@media(max-width:900px){
+@media(max-width:950px){
 
 .hero-container{
 grid-template-columns:1fr;
@@ -327,26 +290,26 @@ font-size:52px;
 justify-content:center;
 }
 
-.timeline::before{
-left:20px;
-}
-
-.timeline-item{
-width:100%;
-padding-left:60px;
-padding-right:0;
-text-align:left !important;
-left:0 !important;
-margin-bottom:30px;
+.about-container{
+grid-template-columns:1fr;
 }
 
 .section-title{
-font-size:38px;
+font-size:40px;
+}
+
+.vision-box{
+padding:45px 25px;
+}
+
+.vision-box p{
+font-size:17px;
 }
 
 }
 
 </style>
+
 </head>
 
 <body>
@@ -370,24 +333,29 @@ Manali <span class="highlight">Chandan</span>
 </h1>
 
 <h2>
-Founder • EduAccess Global • International Education Consultant
+Founder — EduAccess Global  
+Strategic Education Advisory • Academic Mobility • Institutional Collaborations
 </h2>
 
 <p>
-With over a decade of experience in international education and student counseling, I have worked across multiple academic destinations including the UK, USA, Canada, Australia, New Zealand, Europe, Germany, and Russia.
+With over a decade of experience across diversified educational domains, Manali Chandan has worked extensively within academic advisory, institutional collaborations, student mobility, and strategic educational consulting across India and international markets.
 </p>
 
 <p>
-After years of working with universities, students, and international education systems, I founded EduAccess Global with a vision to provide ethical, transparent, and student-focused guidance for learners exploring opportunities in India, abroad, or through online education.
+Having engaged with universities, institutions, and learners across the UK, USA, Canada, Australia, New Zealand, Europe, Germany, Russia, and emerging education ecosystems, her approach has consistently been rooted in ethical guidance, long-term academic alignment, and outcome-driven mentorship.
+</p>
+
+<p>
+EduAccess Global was established with the vision of creating a refined educational ecosystem that empowers students to make informed academic decisions — whether through study abroad pathways, online learning opportunities, or higher education within India.
 </p>
 
 <div class="button-group">
 
 <a href="mailto:manali_chandhan@outlook.com" class="btn primary-btn">
-Email Me
+Connect via Email
 </a>
 
-<a href="https://wa.me/919139029668" class="btn secondary-btn">
+<a href="https://wa.me/919313902968" class="btn secondary-btn">
 WhatsApp
 </a>
 
@@ -404,118 +372,52 @@ WhatsApp
 <section>
 
 <h2 class="section-title">
-About <span class="highlight">EduAccess</span>
+About <span class="highlight">EduAccess Global</span>
 </h2>
 
-<div class="about-box">
-
-<p>
-EduAccess Global is an education consultancy built on the belief that every student deserves the right guidance before making life-changing academic decisions.
+<p class="section-sub">
+EduAccess Global operates across three focused educational verticals — Study Abroad, Study in India, and Online Education — with the objective of delivering transparent, strategic, and student-centric academic guidance.
 </p>
 
-<br>
+<div class="about-container">
+
+<div class="about-card">
+
+<h3>Study Abroad</h3>
 
 <p>
-Our goal is not just admissions — but helping students choose what is genuinely best for their future based on their profile, interests, budget, career aspirations, and long-term opportunities.
-</p>
-
-<br>
-
-<p>
-From international admissions and university collaborations to online education and career-focused learning pathways, EduAccess Global focuses on creating meaningful educational journeys with transparency and trust.
+Providing personalized academic advisory and international admissions guidance across multiple destinations while ensuring alignment with career aspirations, financial planning, academic profile, and long-term professional growth.
 </p>
 
 </div>
 
-</section>
+<div class="about-card">
 
-<!-- TIMELINE -->
-
-<section>
-
-<h2 class="section-title">
-Journey & <span class="highlight">Experience</span>
-</h2>
-
-<div class="timeline">
-
-<div class="timeline-item">
-
-<div class="timeline-content">
-
-<span>2014</span>
-
-<h3>Beginning of Career</h3>
+<h3>Study in India</h3>
 
 <p>
-Started the professional journey in the education and counseling industry while developing expertise in student guidance and international admissions.
+Supporting students in identifying high-quality academic institutions, career-oriented programs, and educational opportunities within India through structured counseling and informed decision-making.
 </p>
 
 </div>
 
-</div>
+<div class="about-card">
 
-<div class="timeline-item">
-
-<div class="timeline-content">
-
-<span>2015 - 2018</span>
-
-<h3>International Counseling Exposure</h3>
+<h3>Online Education</h3>
 
 <p>
-Worked with students and universities across UK, Canada, Europe, and Australia while handling counseling, admissions guidance, and visa support.
+Facilitating access to flexible and industry-relevant online learning opportunities designed to support professional advancement, skill development, and academic continuity.
 </p>
 
 </div>
 
-</div>
+<div class="about-card">
 
-<div class="timeline-item">
-
-<div class="timeline-content">
-
-<span>2018 - 2022</span>
-
-<h3>Global Student Mobility</h3>
+<h3>Institutional Collaborations</h3>
 
 <p>
-Expanded experience into multiple countries including USA, New Zealand, Germany, and Russia while working closely with university systems and international education processes.
+Focused on building sustainable collaborations with universities, institutions, educational partners, and academic networks to create value-driven educational ecosystems.
 </p>
-
-</div>
-
-</div>
-
-<div class="timeline-item">
-
-<div class="timeline-content">
-
-<span>2022 - 2025</span>
-
-<h3>Leadership & University Relations</h3>
-
-<p>
-Worked on university partnerships, student recruitment, strategic guidance, and relationship management while helping students explore global opportunities.
-</p>
-
-</div>
-
-</div>
-
-<div class="timeline-item">
-
-<div class="timeline-content">
-
-<span>2026</span>
-
-<h3>Foundation of EduAccess Global</h3>
-
-<p>
-Started EduAccess Global with a vision to create transparent, ethical, and student-focused educational guidance for learners worldwide.
-</p>
-
-</div>
 
 </div>
 
@@ -528,51 +430,51 @@ Started EduAccess Global with a vision to create transparent, ethical, and stude
 <section>
 
 <h2 class="section-title">
-Areas of <span class="highlight">Expertise</span>
+Core <span class="highlight">Expertise</span>
 </h2>
 
 <p class="section-sub">
-Experience built through years of working with students, universities, and international education systems across multiple countries and academic destinations.
+An experience portfolio cultivated through years of engagement with universities, educational institutions, admissions ecosystems, and student advisory frameworks across diverse academic geographies.
 </p>
 
 <div class="cards">
 
 <div class="card">
 
-<h3>International Admissions</h3>
+<h3>Academic Advisory</h3>
 
 <p>
-Guidance for undergraduate, postgraduate, diploma, and pathway programs across multiple countries and universities.
+Comprehensive guidance across undergraduate, postgraduate, diploma, pathway, and specialized academic programs aligned with individual aspirations and evolving global opportunities.
 </p>
 
 </div>
 
 <div class="card">
 
-<h3>University Collaborations</h3>
+<h3>Strategic Counseling</h3>
 
 <p>
-Building and maintaining meaningful partnerships with institutions, agents, and global education networks.
+Structured counseling methodologies focused on academic suitability, institutional credibility, long-term career mapping, and informed educational decision-making.
 </p>
 
 </div>
 
 <div class="card">
 
-<h3>Student Counseling</h3>
+<h3>International Mobility</h3>
 
 <p>
-Helping students choose the right academic pathways aligned with their goals, interests, and long-term growth.
+Extensive exposure to international admissions systems, mobility frameworks, documentation protocols, and global education procedures across multiple countries.
 </p>
 
 </div>
 
 <div class="card">
 
-<h3>Visa Guidance</h3>
+<h3>University Partnerships</h3>
 
 <p>
-Supporting students with documentation guidance, application processes, and international mobility procedures.
+Experience in institutional relationship management, collaborative engagement, partnership development, and long-term educational networking initiatives.
 </p>
 
 </div>
@@ -586,13 +488,14 @@ Supporting students with documentation guidance, application processes, and inte
 <section class="vision">
 
 <h2 class="section-title">
-Our <span class="highlight">Vision</span>
+Vision & <span class="highlight">Philosophy</span>
 </h2>
 
 <div class="vision-box">
 
 <p>
-To provide honest, transparent, and meaningful educational guidance to every student looking for opportunities in India, abroad, or online — ensuring that every academic decision creates long-term value for their future.
+At EduAccess Global, education is viewed not merely as an admission process, but as a transformational journey that shapes futures, identities, and opportunities.  
+The vision is to establish an ecosystem where students receive authentic, transparent, and strategically aligned educational guidance — empowering them to pursue pathways that genuinely complement their ambitions, capabilities, and long-term aspirations.
 </p>
 
 </div>
@@ -604,21 +507,21 @@ To provide honest, transparent, and meaningful educational guidance to every stu
 <section class="contact">
 
 <h2 class="section-title">
-Let's Build <span class="highlight">Collaborations</span>
+Collaborations & <span class="highlight">Professional Engagements</span>
 </h2>
 
 <p class="section-sub">
-Open to university partnerships, educational collaborations, strategic networking, and international student mobility initiatives.
+Open to institutional collaborations, strategic academic partnerships, educational networking opportunities, and global engagement initiatives.
 </p>
 
 <div class="contact-links">
 
 <a href="mailto:manali_chandhan@outlook.com">
-manali__chandhan@outlook.com
+manali_chandhan@outlook.com
 </a>
 
-<a href="https://wa.me/919139029668">
-+91 9139029668
+<a href="https://wa.me/919313902968">
++91 9313902968
 </a>
 
 <a href="#">
